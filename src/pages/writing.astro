@@ -1,0 +1,23 @@
+---
+import { getCollection } from 'astro:content';
+const pageTitle = 'Louis Chenais | Writing';
+const allPosts = await getCollection('posts');
+import Layout from '@/layouts/Layout.astro';
+---
+<Layout title="Louis Chenais">
+	<main>
+    <h1>Writing</h1>
+    <h2>Here're a few words I've written.</h2>
+    <ul class="article-list">    
+        {allPosts.map((post) =>
+          <li>
+              <article>
+                <h3>
+                  <a href={`/posts/${post.slug}/`} aria-label={`Read ${post.data.title}`}>{post.data.title}</a>
+                </h3>
+              </article>
+          </li>
+        )}
+    </ul>
+  </main>
+</Layout>

@@ -1,0 +1,11 @@
+---
+const year = new Date().getFullYear()
+---
+<footer>
+  <a href="https://twitter.com/chuckn0risk">Twitter</a>
+  <p>&copy; <span id="footer-year">{year}</span></p>
+</footer>
+
+<script is:inline>
+  document.getElementById("footer-year").innerText = new Date().getFullYear();
+</script>

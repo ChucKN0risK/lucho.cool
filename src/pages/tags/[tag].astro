@@ -1,0 +1,37 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  const allPosts = await getCollection("posts");
+  const uniqueTags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
+
+  return uniqueTags.map((tag) => {
+    const filteredPosts = allPosts.filter((post) =>
+      post.data.tags.includes(tag)
+    );
+    return {
+      params: { tag },
+      props: { posts: filteredPosts },
+    };
+  });
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+---
+
+<Layout title={tag}>
+  <p>Posts tagged with {tag}</p>
+  <ul class="article-list">    
+    {posts.map((post) =>
+      <li>
+          <article>
+            <h3>
+              <a href={`/posts/${post.slug}/`} aria-label={`Read ${post.data.title}`}>{post.data.title}</a>
+            </h3>
+          </article>
+      </li>
+    )}
+</ul>
+</Layout>
