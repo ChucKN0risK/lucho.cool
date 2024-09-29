@@ -1,17 +1,16 @@
 ---
 import { getW3FormattedDate, getFormattedDate } from "@/utils";
-import { Image } from "astro:assets";
 import Layout from '@/layouts/Layout.astro';
-const { frontmatter } = Astro.props;
-const w3FormattedDate = getW3FormattedDate(frontmatter.date);
-const formattedDate = getFormattedDate(frontmatter.date);
+const { post } = Astro.props;
+const w3FormattedDate = getW3FormattedDate(post.date);
+const formattedDate = getFormattedDate(post.date);
 ---
 <Layout title="Louis Chenais">
   <main class="article-content">
     <div class="article-img">
       <img
-        src={frontmatter.cover.src}
-        alt={frontmatter.coverAlt}
+        src={post.cover.src}
+        alt={post.coverAlt}
         loading="lazy"
       />
     </div>
