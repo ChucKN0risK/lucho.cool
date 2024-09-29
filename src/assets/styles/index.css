@@ -42,6 +42,10 @@ h1, h2, h3 {
     color: hsl(0, 0%, 100%);
 }
 
+:is(h3, h4, h5) {
+    font-weight: 600;
+}
+
 a {
     color: var(--link-color);
     font-weight: 500;
@@ -95,8 +99,8 @@ footer {
 }
 
 :is(ol, ul) {
-    padding-inline-start: 0;
-    list-style: none;
+    padding-inline-start: 1.2rem;
+    /* list-style: none; */
 }
 
 :is(ol, ul) > * + * {
@@ -109,6 +113,11 @@ footer {
 
 :is(h1, h2, h3, h4) + * {
     margin-top: var(--base-space-4);
+}
+
+p:has(:is(img, picture, video)) {
+    margin-top: var(--base-space-8);
+    margin-bottom: var(--base-space-8);
 }
 
 footer {
@@ -155,8 +164,15 @@ time {
 .article-img {
     position: relative;
     width: 100%;
-    overflow: hidden;
     aspect-ratio: 1.83;
+}
+
+.article-img,
+p:has(img, picture, video) {
+    /* display:flex to prevent useless space
+    at the bottom that crops the image */
+    display: flex;
+    overflow: hidden;
     border-radius: var(--base-space-4);
 }
 
@@ -170,4 +186,23 @@ time {
 .article-img + * {
     margin-top: var(--base-space-8);
     margin-bottom: var(--base-space-4);
+}
+
+blockquote {
+    margin-left: 0;
+
+    * + & {
+        margin-top: var(--base-space-16);
+    }
+
+    & + * {
+        margin-top: var(--base-space-16);
+    }
+
+    & > p:first-child {
+        font-size: 1.5rem;
+        line-height: 1.5;
+        font-weight: 500;
+        color: #fff;
+    }
 }
