@@ -6,6 +6,7 @@
 
 :root {
     --white: hsl(0, 0%, 100%);
+    --grey-light: hsl(0, 0%, 83%);
     --grey: hsl(0, 0%, 21%);
     --blue: hsl(210, 92%, 47%);
     --blue-sky: hsl(202.6, 76.7%, 64.7%);
@@ -16,7 +17,7 @@
 }
 
 html {
-    color: hsl(0, 0%, 83%);
+    color: var(--grey-light);
     background-color: hsl(0, 0%, 10%);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -83,6 +84,16 @@ header, main, footer {
     margin-right: auto;
 }
 
+header, footer {
+    padding-top: var(--base-space-4);
+    padding-bottom: var(--base-space-4);
+
+    * {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
 header {
     display: flex;
     align-items: center;
@@ -92,6 +103,17 @@ header {
 
 :is(header, footer) a {
     --link-color: var(--white);
+}
+
+nav > ul {
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    & > * + * {
+        margin-left: var(--base-space-4);
+    }
 }
 
 main {
@@ -104,12 +126,7 @@ footer {
     border-top: var(--border);
 }
 
-:is(ol, ul) {
-    padding-inline-start: 1.2rem;
-    /* list-style: none; */
-}
-
-:is(ol, ul) > * + * {
+:not(nav) > :is(ol, ul) > * + * {
     margin-top: var(--base-space-2);
 }
 
@@ -253,4 +270,35 @@ pre {
     border-radius: var(--border-radius);
     padding: var(--base-space-6);
     font-size: 0.8em;
+}
+
+.footnotes {
+    ol {
+        padding-inline-start: 1.2rem;
+    }
+}
+
+.article-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--base-space-4);
+    padding-left: 0;
+
+    & > li {
+        display: flex;
+        flex-direction: column;
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+    }
+
+    time {
+        color: var(--grey-light);
+    }
+
+    h3 {
+        color: inherit;
+    }
 }
