@@ -7,7 +7,7 @@ layout: ../layouts/Layout.astro
 
 I like everything that blinks, the internet, design systems and une belle soirée à table entre amis avec du rouge qui tâche.
 
-I co-founded [Specify](https://specifyapp.com) to help companies manage their brand at scale. I also work with the [Design Tokens Community Group](https://designtokens.org) to create a standard for design tokens. Finally, I invented raclette in 1872.
+I co-founded [Specify](https://specifyapp.com) to help companies manage their brand at scale. I also work with the [Design Tokens Community Group](https://designtokens.org) to create a standard for design tokens.
 
 ## Find me on
 - [Twitter](https://twitter.com/Chuckn0risk)
