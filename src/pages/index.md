@@ -18,6 +18,9 @@ I co-founded [Specify](https://specifyapp.com) to help companies manage their br
 
 ## Track records
 
+### 2024
+- 👥 Speaker at [MeetUp : Design Tokens série #1 Définitions, mise en oeuvre et cas pratique](https://youtu.be/mwng4iaua-s?si=HjmZw9OTK0Fc73sX&t=1900)
+
 ### 2023
 - 👥 Speaker at [Design System Day 2023](https://noti.st/louischenais/AVgBDp/how-design-tokens-empower-brand-consistency-at-scale)
 - 👥 Speaker at Into Design Systems: [Pushing design tokens to the next level - Dashlane x Specify](https://www.youtube.com/watch?v=WddIeXUvVEY)
