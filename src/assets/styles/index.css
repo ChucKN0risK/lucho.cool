@@ -120,7 +120,6 @@ nav > ul {
         display: flex;
         padding-top: var(--base-space-1);
         padding-bottom: var(--base-space-1);
-        color: var(--white);
 
         &.active {
             position: relative;
