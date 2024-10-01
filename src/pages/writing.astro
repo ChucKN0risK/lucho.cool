@@ -1,11 +1,11 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, type CollectionEntry } from 'astro:content';
 import { getW3FormattedDate, getFormattedDate } from '@/utils';
 const pageTitle = 'Louis Chenais | Writing';
 const allPosts = (
   await getCollection(
     'posts',
-    ({ data }) => data.date <= new Date())
+    ({ data }: CollectionEntry<'posts'>) => data.date <= new Date())
 )
 // https://astrocourse.dev/blog/how-to-use-content-collections/
 const sortedPosts = allPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
