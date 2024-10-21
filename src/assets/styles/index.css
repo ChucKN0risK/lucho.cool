@@ -15,6 +15,7 @@
     --border: 1px solid var(--grey);
     --border-radius: var(--base-space-4);
     --border-radius-small: var(--base-space-2);
+    --main-content-width: clamp(16rem, 90vw, 65ch);
 }
 
 html {
@@ -22,12 +23,13 @@ html {
     background-color: hsl(0, 0%, 10%);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    height: 100%;
 }
 
 html, body {
     margin: 0;
     padding: 0;
-    height: 100%;
+    min-height: 100%;
 }
 
 body {
@@ -38,6 +40,18 @@ body {
     font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
     font-style: normal;
     font-weight: 300;
+
+    @media screen and (min-width: 1001px) {
+        display: grid;
+        row-gap: var(--base-space-8);
+        column-gap: var(--base-space-16);
+        grid-template-columns: 1fr var(--main-content-width) 1fr;
+        grid-template-areas:
+            '... header ...'
+            '... main ...'
+            '... footer ...';
+        grid-template-rows: min-content 1fr min-content;
+    }
 }
 
 h1, h2, h3 {
@@ -80,14 +94,19 @@ figure {
 }
 
 header, main, footer {
-    width: clamp(16rem, 90vw, 65ch);
-    margin-left: auto;
-    margin-right: auto;
+    @media screen and (max-width: 1000px) {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 header, footer {
     padding-top: var(--base-space-4);
     padding-bottom: var(--base-space-4);
+    
+    @media screen and (max-width: 1000px) {
+        width: var(--main-content-width);
+    }
 
     * {
         margin-top: 0;
@@ -100,6 +119,39 @@ header {
     align-items: center;
     justify-content: space-between;
     border-bottom: var(--border);
+
+    @media screen and (min-width: 1001px) {
+        grid-area: header;
+    }
+}
+
+footer {
+    @media screen and (min-width: 1001px) {
+        grid-area: footer;
+    }
+}
+
+main {
+    @media screen and (max-width: 1000px) {
+        width: var(--main-content-width);
+    }
+
+    @media screen and (min-width: 1001px) {
+        &:not(:has(aside)) {
+            grid-area: main;
+        }
+        
+        &:has(aside) {
+            grid-row-start: 2;
+            grid-row-end: 3;
+            grid-column-start: 2;
+            grid-column-end: 4;
+            display: grid;
+            grid-template-columns: subgrid;
+            grid-template-areas: 'article toc';
+        }
+    }
+
 }
 
 :is(header, footer) a {
@@ -121,7 +173,7 @@ nav > ul {
         padding-top: var(--base-space-1);
         padding-bottom: var(--base-space-1);
 
-        &.active {
+        &[aria-current="page"] {
             position: relative;
             
             &::after {
@@ -153,6 +205,7 @@ footer {
 
 :not(hr, h1, h2, h3, h4) + :is(h2, h3, h4, section.footnotes) {
     margin-top: var(--base-space-16);
+    scroll-margin-top: var(--base-space-4);
 }
 
 :is(h1, h2, h3, h4) + * {
@@ -179,22 +232,6 @@ footer {
     text-decoration-skip: auto;
 }
 
-.article-list {
-    margin-top: var(--base-space-16);
-}
-
-.article {
-    color: var(--white);
-}
-
-.article:hover {
-    color: var(--blue);
-}
-
-.article h3 {
-    color: inherit;
-}
-
 time {
     text-transform: uppercase;
     font-weight: 500;
@@ -209,6 +246,7 @@ time {
     position: relative;
     width: 100%;
     aspect-ratio: 1.83;
+    overflow: hidden;
 }
 
 .article-img, img, picture, video {
@@ -311,8 +349,15 @@ pre {
     }
 
     article {
+        --color: var(--white);
+        
         display: flex;
         flex-direction: column;
+        color: var(--color);
+        
+        &:hover {
+            --color: var(--blue);
+        }
     }
 
     time {
@@ -321,5 +366,50 @@ pre {
 
     h3 {
         color: inherit;
+    }
+}
+
+.article-content {
+    @media screen and (min-width: 1001px) {
+        grid-area: article;
+    }
+}
+
+.table-of-contents {
+    @media screen and (max-width: 1000px) {
+        display: none;
+    }
+
+    @media screen and (min-width: 1001px) {
+        grid-area: toc;
+    }
+
+    display: block;
+    position: sticky;
+    top: var(--base-space-8);
+    align-self: flex-start;
+    padding-inline-end: var(--base-space-4);
+    width: min(100%, 20rem);
+
+    ul {
+        list-style: none;
+        padding-inline-start: 0;
+    }
+
+    li > ul > li {
+        padding-left: var(--base-space-6);
+    }
+
+    li > ul {
+        margin-top: var(--base-space-2);
+    }
+
+    a {
+        font-size: 0.8em;
+        line-height: 1;
+
+        &:not(:hover) {
+            color: var(--grey-light);
+        }
     }
 }

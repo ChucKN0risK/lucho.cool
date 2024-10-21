@@ -1,15 +1,30 @@
 ---
-const pathname = new URL(Astro.request.url).pathname;
-const currentPath = pathname.slice(1); // remove the first "/"
-console.log(pathname, currentPath)
+import { menuLinks } from '@/site.config';
+const url = new URL(Astro.request.url);
 ---
 
 <header>
-  <a href="/">Louis C.</a>
-  <nav>
+  <a
+    href="/"
+    aria-current={url.pathname === "/" ? "page" : false}
+  >
+    Louis C.
+  </a>
+  <nav aria-label="Main menu">
     <ul class="u-list-style:none">
-      <li><a class={currentPath === "writing/" ? "active" : ""} href="/writing/">Writing</a></li>
-      <li><a class={currentPath === "speaking/" ? "active" : ""} href="/speaking/">Speaking</a></li>
+      {
+				menuLinks.map((link) => (
+        <li>
+					<a
+						aria-current={url.pathname === link.path ? "page" : false}
+						data-astro-prefetch
+						href={link.path}
+					>
+						{link.title}
+					</a>
+        </li>
+				))
+			}
     </ul>
   </nav>
 </header>

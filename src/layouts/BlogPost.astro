@@ -1,20 +1,32 @@
 ---
+import { Image } from "astro:assets";
 import { getW3FormattedDate, getFormattedDate } from '@/utils';
 import Layout from '@/layouts/Layout.astro';
-const { frontmatter } = Astro.props;
-const w3FormattedDate = getW3FormattedDate(frontmatter.date);
-const formattedDate = getFormattedDate(frontmatter.date);
+import TOC from '@/components/TOC.astro';
+import type { CollectionEntry } from "astro:content";
+interface Props {
+	post: CollectionEntry<"posts">;
+}
+
+const { post } = Astro.props;
+const { headings } = await post.render();
+
+const w3FormattedDate = getW3FormattedDate(post.data.date);
+const formattedDate = getFormattedDate(post.data.date);
 ---
 <Layout title="Louis Chenais">
-  <div class="article-content">
+  {headings.length > 1 && <TOC headings={headings} />}
+  <article class="article-content">
     <div class="article-img">
-      <img
-        src={frontmatter.cover.src}
-        alt={frontmatter.coverAlt}
-        loading="lazy"
+      <Image
+        alt={post.data.coverImage.alt}
+        class="object-cover"
+        fetchpriority="high"
+        loading="eager"
+        src={post.data.coverImage.src}
       />
     </div>
     <time datetime={w3FormattedDate}>{formattedDate}</time>
     <slot />
-  </div>
+  </article>
 </Layout>

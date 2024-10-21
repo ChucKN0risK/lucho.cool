@@ -3,8 +3,9 @@ title: Introduction to Design Tokens
 date: '2021-05-27'
 description: Learn about what design tokens are and how they can help you scale your branding with confidence.
 author: Louis Chenais
-cover: '@/assets/img/blog/introduction-to-design-tokens-cover.avif'
-coverAlt: ''
+coverImage:
+  src: '@/assets/img/blog/introduction-to-design-tokens-cover.avif'
+  alt: ''
 tags: ['design', 'development']
 ---
 

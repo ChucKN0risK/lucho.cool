@@ -11,8 +11,11 @@ const postsCollection = defineCollection({
         .transform((val) => new Date(val)),
       description: z.string(),
       author: z.string(),
-      cover: image(),
-      coverAlt: z.string(),
+      coverImage: z
+        .object({
+          alt: z.string(),
+          src: image(),
+        }),
       tags: z.array(z.string())
     }).strict()
 });

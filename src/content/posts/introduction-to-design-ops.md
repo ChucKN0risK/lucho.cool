@@ -3,8 +3,9 @@ title: Introduction to DesignOps
 date: '2022-09-20'
 description: Learn more about Design Operations aka "DesignOps". What is it? Where is it? Who does it involve? How can I get started? 
 author: Louis Chenais
-cover: '@/assets/img/blog/design-ops-menu.avif'
-coverAlt: ''
+coverImage:
+  src: '@/assets/img/blog/design-ops-menu.avif'
+  alt: ''
 tags: ['design']
 ---
 # Introduction to DesignOps
@@ -152,4 +153,4 @@ I hope you're as excited as I am.
 [^2]: Dylan Field, CEO of Figma, shared in 2017 where he explains why [organizations are prioritizing design](https://techcrunch.com/2017/05/31/here-are-some-reasons-behind-techs-design-shortage/)
 [^3]: [Alex Schleifer, The Way We Build - How rethinking the Airbnb app changed the way we approach design](https://airbnb.design/the-way-we-build/)
 [^4]: [Andy Budd, Design Ops — A New Discipline](https://clearleft.com/posts/design-ops-a-new-discipline)
-[^5]: The Design Ops Menu was originally shared by the Nielsen Norman Group in their article [DesignOps 101](https://www.nngroup.com/articles/design-operations-101/)↩
+[^5]: The Design Ops Menu was originally shared by the Nielsen Norman Group in their article [DesignOps 101](https://www.nngroup.com/articles/design-operations-101/)
