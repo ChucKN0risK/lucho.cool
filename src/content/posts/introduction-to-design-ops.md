@@ -7,9 +7,8 @@ coverImage:
   src: '@/assets/img/blog/design-ops-menu.avif'
   alt: ''
 tags: ['design']
+readingTime: '7min'
 ---
-# Introduction to DesignOps
-
 After reading this post, you'll have a clear idea of what DesignOps is and how it can help your team deliver design improvements in the hands of your users as quickly and with as little friction as possible.
 
 Ready? Let's dive in 🤿

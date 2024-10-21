@@ -7,9 +7,8 @@ coverImage:
   src: '@/assets/img/blog/introduction-to-design-tokens-cover.avif'
   alt: ''
 tags: ['design', 'development']
+readingTime: '8min'
 ---
-
-# Introduction to design tokens
 
 Whether you're a designer, a developer, a manager or a curious executive wanting to scale your organisation's branding with consistency: this post is for you.
 
