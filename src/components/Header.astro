@@ -1,5 +1,8 @@
 ---
 import { menuLinks } from '@/site.config';
+import { Image } from 'astro:assets';
+import img from '../assets/img/avatar-louis.jpg';
+
 const url = new URL(Astro.request.url);
 ---
 
@@ -8,7 +11,10 @@ const url = new URL(Astro.request.url);
     href="/"
     aria-current={url.pathname === "/" ? "page" : false}
   >
-    Louis C.
+    <div class="avatar">
+      <Image src={img} alt="Louis Chenais" />
+    </div>
+    <span>Louis C.</span>
   </a>
   <nav aria-label="Main menu">
     <ul class="u-list-style:none">
