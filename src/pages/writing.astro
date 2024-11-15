@@ -3,19 +3,20 @@ import { getCollection, type CollectionEntry } from 'astro:content';
 import { getW3FormattedDate, getFormattedDate } from '@/utils';
 import Layout from '@/layouts/Layout.astro';
 const pageTitle = 'Louis Chenais | Writing';
-const allPosts = (
-  await getCollection(
-    'posts',
-    ({ data }: CollectionEntry<'posts'>) => data.date <= new Date())
-)
+const allPosts = await getCollection(
+  'posts',
+  ({ data }: CollectionEntry<'posts'>) => data.date <= new Date()
+);
 // https://astrocourse.dev/blog/how-to-use-content-collections/
-const sortedPosts = allPosts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
-const formattedPosts = sortedPosts.map(post => {
+const sortedPosts = allPosts.sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+const formattedPosts = sortedPosts.map((post) => {
   const formattedPost = {
     title: post.data.title,
     w3FormattedDate: getW3FormattedDate(post.data.date),
     formattedDate: getFormattedDate(post.data.date),
-    url: `/posts/${post.slug}/`
+    url: `/posts/${post.slug}/`,
   };
   return formattedPost;
 });
@@ -23,21 +24,48 @@ const formattedPosts = sortedPosts.map(post => {
 import type { Page } from 'astro';
 
 interface Props {
-	page: Page<CollectionEntry<'posts'>>;
+  page: Page<CollectionEntry<'posts'>>;
 }
 ---
+
 <Layout title={pageTitle}>
-	<h1>Writing</h1>
-  <ul class="article-list u-list-style:none">
-    {formattedPosts.map((post) =>
-      <li>
-        <article>
-          <a href={post.url} aria-label={`Read ${post.title}`}>
-            <h3>{post.title}</h3>
-            <time datetime={post.w3FormattedDate}>{post.formattedDate}</time>
-          </a>
-        </article>
-      </li>
-    )}
+  <h1>Writing</h1>
+  <ul class='article-list u-list-style:none'>
+    {
+      formattedPosts.map((post) => (
+        <li>
+          <article>
+            <a href={post.url} aria-label={`Read ${post.title}`}>
+              <h3>{post.title}</h3>
+              <time datetime={post.w3FormattedDate}>{post.formattedDate}</time>
+            </a>
+          </article>
+        </li>
+      ))
+    }
+    <li>
+      <article>
+        <a
+          href='https://uxdesign.cc/design-tokens-for-dummies-8acebf010d71'
+          aria-label='Read Design Tokens for Dummies'
+        >
+          <h3>Design Tokens for Dummies</h3>
+          <time datetime='2017-01-17T00:00:00.000ZJan 17, 2018'
+            >Jan 17, 2018</time
+          >
+        </a>
+      </article>
+    </li>
+    <li>
+      <article>
+        <a
+          href='https://medium.com/@chuckn0risk/4-responsive-navigation-principles-4f3f57a8a2d1'
+          aria-label='Read 4 Responsive Navigation Principles & Their Implementation'
+        >
+          <h3>4 Responsive Navigation Principles & Their Implementation</h3>
+          <time datetime='2016-02-08T00:00:00.000Z'>Feb 8, 2016</time>
+        </a>
+      </article>
+    </li>
   </ul>
 </Layout>
