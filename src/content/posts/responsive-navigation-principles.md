@@ -20,9 +20,9 @@ Ethan Marcotte also says:
 
 > "A responsive navigation system doesn't need to look or work the same at every breakpoint, but it does need to offer access to the same content across devices."
 >
-> Ethan Marcotte, [Responsive Design : Patterns & Principles ↗︎](https://ethanmarcotte.com/books/responsive-design-patterns-and-principles/full/chap02/)
+> Ethan Marcotte, [Responsive Design: Patterns & Principles ↗︎](https://ethanmarcotte.com/books/responsive-design-patterns-and-principles/full/chap02/)
 
-Also he asks the following question : How can we design navigation that's as usable as it is responsive?
+Also he asks the following question: How can we design navigation that's as usable as it is responsive?
 
 To answer this question I'll present you 4 navigations systems you can put in place. Of course they all have their pros and cons.
 
@@ -39,7 +39,7 @@ Here is the list of different navigations I'll cover in this paper:
 
 On small viewports, where screen real-estate is at a premium we only show a « Menu » link. When the user taps, clicks or selects with his keyboard that link the navigation appears. Clicking again on that link, clicking outside that menu or hitting the ESC key will close it.
 
-Note : Study shows that [you should use the « MENU » button](https://web.archive.org/web/20170714093902/https://sitesforprofit.com/menu-eats-hamburger) instead of the hamburger icon for a better usability.
+Note: Study shows that [you should use the « MENU » button](https://web.archive.org/web/20170714093902/https://sitesforprofit.com/menu-eats-hamburger) instead of the hamburger icon for a better usability.
 
 Yes the hamburger menu suffers from lots of criticisms however it has its strengths and weaknesses. It is adapted for a certain audience in a certain condition. Like every navigation principles I will describe in this article they all have their pros and cons. They will all fit specific needs for specific users.
 
@@ -75,7 +75,7 @@ The Guardian uses the latter toggle. However the viewport size and the space ava
 
 ![](@/assets/img/blog/progressive-disclosure-navigation-2.gif)
 
-Note : I didn't manage to hide the horizontal scrollbar on Firefox. They did it on The Guardian though but I don't know how. Your help on this is more than welcome :)
+Note: I didn't manage to hide the horizontal scrollbar on Firefox. They did it on The Guardian though but I don't know how. Your help on this is more than welcome :)
 
 <iframe height="300" style="width: 100%;" scrolling="no" title="Responsive Navigation Principle #2 - Progressive Disclosure With Horizontal Scroll" src="https://codepen.io/ChucKN0risK/embed/LGzmmW?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
   See the Pen <a href="https://codepen.io/ChucKN0risK/pen/LGzmmW">
@@ -150,7 +150,7 @@ To conclude, I would like to say that among these Responsive Navigation Principl
 
 > "If our audience are becoming predominantly mobile, we should stop trying to make complex, widescreen-designed elements play nice on smaller screens — instead, we should consider the small-screen user's need first."
 >
-> Ethan Marcotte, [Responsive Design : Patterns & Principles ↗︎](https://ethanmarcotte.com/books/responsive-design-patterns-and-principles/full/chap02/)
+> Ethan Marcotte, [Responsive Design: Patterns & Principles ↗︎](https://ethanmarcotte.com/books/responsive-design-patterns-and-principles/full/chap02/)
 
 These implementations are meant to help you start design a navigation system design. I invite you to grab the code and play with it.
 
