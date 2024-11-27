@@ -86,6 +86,10 @@ figure {
     margin-right: 0;
 }
 
+code {
+    word-wrap: break-word;
+}
+
 :focus:is(input, select, textarea) {
     border-color: aqua;
 }
