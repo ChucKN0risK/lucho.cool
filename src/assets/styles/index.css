@@ -406,10 +406,10 @@ pre {
     }
 
     @media screen and (min-width: 1201px) {
+        display: block;
         grid-area: toc;
     }
 
-    display: block;
     position: sticky;
     top: var(--base-space-8);
     align-self: flex-start;
