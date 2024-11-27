@@ -62,7 +62,7 @@ Close your eyes and imagine a world where a design tokens generator would be int
 2. The design tool updates design tokens files according to targeted platform.
 3. Developers only have to retrieve or "pull" updated files and use it in their project.
 
-![](@/assets/img/blog/design-tokens-workflow-2018.webp)
+![](@/assets/img/blog/design-tokens-workflow-2018.avif)
 
 This would save a lot of time for developers and ensure consistency in design making designers and product-owners happy 😃
 
