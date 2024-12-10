@@ -41,7 +41,7 @@ You'll notice my "Components" layer is "empty" and doesn't import any SCSS file.
   └── MyComponent.story.ts
 ```
 
-## Mu current architecture
+## My current architecture
 
 My SCSS architecture is rather simple: SCSS files from the same layer are in the same folder. Sometimes, files are organized by folder.
 
