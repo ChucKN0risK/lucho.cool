@@ -88,6 +88,21 @@ figure {
 
 code {
     word-wrap: break-word;
+
+    &:not(pre *) {
+        position: relative;
+        display: inline;
+        font-family: monospace;
+        font-size: 1rem;
+        font-style: normal;
+        letter-spacing: -.5px;
+        padding: 2px 6px;
+        margin: 1px -1px;
+        background: rgb(43, 52, 59);
+        border-radius: 4px;
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+    }
 }
 
 :focus:is(input, select, textarea) {
@@ -458,6 +473,7 @@ pre {
 
     h1 {
         font-size: 3rem;
+        line-height: 1.2;
     }
 }
 
