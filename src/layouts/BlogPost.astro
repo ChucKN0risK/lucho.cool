@@ -1,12 +1,12 @@
 ---
-import { Image } from 'astro:assets';
-import { getW3FormattedDate, getFormattedDate } from '@/utils';
-import Layout from '@/layouts/Layout.astro';
-import TOC from '@/components/TOC.astro';
-import type { CollectionEntry } from 'astro:content';
-import clockIcon from '../assets/vectors/clock.svg?raw';
+import { Image } from "astro:assets";
+import { getW3FormattedDate, getFormattedDate } from "@/utils";
+import Layout from "@/layouts/Layout.astro";
+import TOC from "@/components/TOC.astro";
+import type { CollectionEntry } from "astro:content";
+import clockIcon from "../assets/vectors/clock.svg?raw";
 interface Props {
-	post: CollectionEntry<'posts'>;
+  post: CollectionEntry<"posts">;
 }
 
 const { post } = Astro.props;
@@ -15,21 +15,22 @@ const { headings } = await post.render();
 const w3FormattedDate = getW3FormattedDate(post.data.date);
 const formattedDate = getFormattedDate(post.data.date);
 ---
-<Layout title="Louis Chenais">
+
+<Layout title={post.data.title}>
   {headings.length > 1 && <TOC headings={headings} />}
-  <article class="article-content">
-    <div class="article-hero">
-      <div class="article-img">
+  <article class='article-content'>
+    <div class='article-hero'>
+      <div class='article-img'>
         <Image
           alt={post.data.coverImage.alt}
-          class="object-cover"
-          fetchpriority="high"
-          loading="eager"
+          class='object-cover'
+          fetchpriority='high'
+          loading='eager'
           src={post.data.coverImage.src}
         />
       </div>
       <h1>{post.data.title}</h1>
-      <div class="article-info">
+      <div class='article-info'>
         <time datetime={w3FormattedDate}>{formattedDate}</time>
         <div>
           <Fragment set:html={clockIcon} />
