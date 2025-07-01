@@ -1,16 +1,16 @@
 ---
 title: Migrating your SCSS architecture to the "@use" rule
-date: '2024-12-05'
+date: "2024-12-05"
 description: Let's migrate an old SCSS architecture from the "@import" rule to the new "@use" rule
 author: Louis Chenais
 coverImage:
-  src: '@/assets/img/blog/migrating-scss-architecture-cover.jpg'
-  alt: ''
-tags: ['design-tokens', 'development']
-readingTime: '6min'
+  src: "@/assets/img/blog/migrating-scss-architecture-cover.jpg"
+  alt: ""
+tags: ["design-tokens", "development"]
+readingTime: "6min"
 ---
 
-I've been using [the ITCSS methodology](https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/) for several years now to organize my styles in all my project. It has proven its effectivenessin all my projects and it's no suprise it's been the one I've used for [Specify](https://www.specifyapp.com) since day one.
+I've been using [the ITCSS methodology](https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/) for several years now to organize my styles in all my project. It has proven its effectiveness in all my projects and it's no suprise it's been the one I've used for [Specify](https://www.specifyapp.com) since day one.
 
 ## What's ITCSS in the first place?
 
@@ -62,8 +62,8 @@ This `_variables.scss` file imports all the files containing my design tokens:
 // == Mixins
 // ----------------------
 
-@import 'mixins/mixins';
-@import 'mixins/text-styles';
+@import "mixins/mixins";
+@import "mixins/text-styles";
 ```
 
 This file is then imported in my `style.scss` file:
@@ -113,8 +113,8 @@ Here's the new content of our `_mixins.scss` barrel file:
 // == Mixins
 // ----------------------
 
-@forward 'mixins/mixins';
-@forward 'mixins/text-styles';
+@forward "mixins/mixins";
+@forward "mixins/text-styles";
 ```
 
 And the content of our `style.scss` file:
@@ -122,20 +122,20 @@ And the content of our `style.scss` file:
 ```scss
 // 01 - Utils
 // ---------------------
-@use '01-utils/variables';
-@use '01-utils/lint';
-@use '01-utils/mixins' as *;
-@use '01-utils/site-settings';
-@use '01-utils/utility-classes';
+@use "01-utils/variables";
+@use "01-utils/lint";
+@use "01-utils/mixins" as *;
+@use "01-utils/site-settings";
+@use "01-utils/utility-classes";
 
 // 02 - Base
 // ---------------------
-@use '02-base/sanitize';
-@use '02-base/base';
+@use "02-base/sanitize";
+@use "02-base/base";
 
 // 03 - Fonts
 // ---------------------
-@use '03-fonts/fonts';
+@use "03-fonts/fonts";
 
 // 04 - Components
 // ---------------------
