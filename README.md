@@ -57,3 +57,5 @@ pnpm i
 - [] Add a RSS feed
   - This might help: https://blog.damato.design/posts/astro-rss-mdx/
 - [] Add a sitemap
+- [] Add animations. See [Netlify article](https://developers.netlify.com/guides/motion-animation-library-with-astro/)
+- Add responsive TOC See [Netlify example](https://developers.netlify.com/guides/motion-animation-library-with-astro/)
