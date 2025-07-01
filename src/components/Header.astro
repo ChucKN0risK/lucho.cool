@@ -1,36 +1,33 @@
 ---
-import { menuLinks } from '@/site.config';
-import { Image } from 'astro:assets';
-import img from '../assets/img/avatar-louis.jpg';
+import { menuLinks } from "@/site.config";
+import { Image } from "astro:assets";
+import img from "../assets/img/avatar-louis.jpg";
 
 const url = new URL(Astro.request.url);
 ---
 
 <header>
-  <a
-    href="/"
-    aria-current={url.pathname === "/" ? "page" : false}
-  >
-    <div class="avatar">
-      <Image src={img} alt="Louis Chenais" />
+  <a href='/' aria-current={url.pathname === "/" ? "page" : false}>
+    <div class='avatar'>
+      <Image src={img} alt='Louis Chenais' />
     </div>
     <span>Louis C.</span>
   </a>
-  <nav aria-label="Main menu">
-    <ul class="u-list-style:none">
+  <nav aria-label='Main menu'>
+    <ul class='u-list-style:none'>
       {
-				menuLinks.map((link) => (
-        <li>
-					<a
-						aria-current={url.pathname === link.path ? "page" : false}
-						data-astro-prefetch
-						href={link.path}
-					>
-						{link.title}
-					</a>
-        </li>
-				))
-			}
+        menuLinks.map((link) => (
+          <li>
+            <a
+              aria-current={url.pathname === link.path ? "page" : false}
+              data-astro-prefetch
+              href={link.path}
+            >
+              {link.title}
+            </a>
+          </li>
+        ))
+      }
     </ul>
   </nav>
 </header>
