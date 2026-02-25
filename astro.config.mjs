@@ -1,5 +1,5 @@
 import { defineConfig } from "astro/config";
-import rehypeFigure from "rehype-figure";
+import rehypeFigure from "@microflash/rehype-figure";
 import rehypeExternalLinks from "rehype-external-links";
 import sitemap from "@astrojs/sitemap";
 import robotsTxt from "astro-robots-txt";
@@ -25,6 +25,10 @@ export default defineConfig({
       ],
     ],
   },
-  integrations: [sitemap(), robotsTxt(), icon({ iconDir: "src/assets/vectors" })],
+  integrations: [
+    sitemap(),
+    robotsTxt(),
+    icon({ iconDir: "src/assets/vectors" }),
+  ],
   prefetch: true,
 });
