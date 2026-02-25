@@ -11,15 +11,16 @@
     "upgrade": "yarn upgrade-interactive"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.4",
-    "@astrojs/sitemap": "^3.2.1",
-    "astro": "^5.2.5",
+    "@astrojs/check": "^0.9.6",
+    "@astrojs/sitemap": "^3.7.0",
+    "@microflash/rehype-figure": "^2.1.4",
+    "astro": "^5.17.3",
     "astro-icon": "^1.1.5",
     "astro-robots-txt": "^1.0.0",
-    "rehype-external-links": "^3.0.0",
-    "rehype-figure": "^2.1.4"
+    "rehype-external-links": "^3.0.0"
   },
   "devDependencies": {
-    "typescript": "^5.7.3"
+    "@biomejs/biome": "2.4.4",
+    "typescript": "^5.9.3"
   }
 }
