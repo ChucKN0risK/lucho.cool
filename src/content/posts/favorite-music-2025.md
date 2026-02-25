@@ -1,6 +1,6 @@
 ---
 title: Favorite music of 2025
-date: "2026-01-11"
+date: "2026-02-25"
 description: New year new habit. Let's try a new one by sharing my favorite music from the past year.
 author: Louis Chenais
 coverImage:
