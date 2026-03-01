@@ -23,6 +23,9 @@ importers:
       astro-icon:
         specifier: ^1.1.5
         version: 1.1.5
+      astro-og:
+        specifier: ^0.3.2
+        version: 0.3.2(astro@5.17.3(@types/node@25.3.0)(rollup@4.59.0)(typescript@5.9.3)(yaml@2.8.2))
       astro-robots-txt:
         specifier: ^1.0.0
         version: 1.0.0
@@ -964,6 +967,11 @@ packages:
   astro-icon@1.1.5:
     resolution: {integrity: sha512-CJYS5nWOw9jz4RpGWmzNQY7D0y2ZZacH7atL2K9DeJXJVaz7/5WrxeyIxO8KASk1jCM96Q4LjRx/F3R+InjJrw==}
 
+  astro-og@0.3.2:
+    resolution: {integrity: sha512-87soXn7bSVzcY+9YyG5xQt/F4J4hsZ6ZKXAfRzBwqiQ2FF+esRLpQU62v6IKQHnlvzkQvmbUmeAKaEP0W1SM2g==}
+    peerDependencies:
+      astro: '>=5.0.0'
+
   astro-robots-txt@1.0.0:
     resolution: {integrity: sha512-6JQSLid4gMhoWjOm85UHLkgrw0+hHIjnJVIUqxjU2D6feKlVyYukMNYjH44ZDZBK1P8hNxd33PgWlHzCASvedA==}
 
@@ -1677,6 +1685,9 @@ packages:
   postcss@8.5.6:
     resolution: {integrity: sha512-3Ybi1tAuwAP9s0r1UQ2J4n5Y0G05bJkpUIO0/bI9MhwmD70S5aTWbXGBwxHrelT+XM1k6dM0pk+SwNkpTRN7Pg==}
     engines: {node: ^10 || ^12 || >=14}
+
+  preact@10.28.2:
+    resolution: {integrity: sha512-lbteaWGzGHdlIuiJ0l2Jq454m6kcpI1zNje6d8MlGAFlYvP2GO4ibnat7P74Esfz4sPTdM6UxtTwh/d3pwM9JA==}
 
   prettier@3.8.1:
     resolution: {integrity: sha512-UOnG6LftzbdaHZcKoPFtOcCKztrQ57WkHDeRD9t/PTQtmT0NHSeWWepj6pS0z/N7+08BHFDQVUrfmfMRcZwbMg==}
@@ -2998,6 +3009,11 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  astro-og@0.3.2(astro@5.17.3(@types/node@25.3.0)(rollup@4.59.0)(typescript@5.9.3)(yaml@2.8.2)):
+    dependencies:
+      astro: 5.17.3(@types/node@25.3.0)(rollup@4.59.0)(typescript@5.9.3)(yaml@2.8.2)
+      preact: 10.28.2
+
   astro-robots-txt@1.0.0:
     dependencies:
       valid-filename: 4.0.0
@@ -4056,6 +4072,8 @@ snapshots:
       nanoid: 3.3.11
       picocolors: 1.1.1
       source-map-js: 1.2.1
+
+  preact@10.28.2: {}
 
   prettier@3.8.1: {}
 

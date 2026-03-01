@@ -5,6 +5,8 @@ import sitemap from "@astrojs/sitemap";
 import robotsTxt from "astro-robots-txt";
 import icon from "astro-icon";
 
+import og from "astro-og";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://lucho.cool",
@@ -29,6 +31,7 @@ export default defineConfig({
     sitemap(),
     robotsTxt(),
     icon({ iconDir: "src/assets/vectors" }),
+    og(),
   ],
   prefetch: true,
 });
