@@ -1,11 +1,9 @@
 ---
 title: Favorite music of 2025
 date: "2026-02-25"
-description: New year new habit. Let's try a new one by sharing my favorite music from the past year.
+description: New year new habit. Let's try a new one by sharing my favorite music from the past year. Here's my favorite music of 2025.
 author: Louis Chenais
-coverImage:
-  src: '@/assets/img/blog/vinyl.avif'
-  alt: ""
+coverImage: '@/assets/img/blog/vinyl.avif'
 tags: ["music"]
 readingTime: 6min
 ---
@@ -18,7 +16,7 @@ I like the title of this one because it does make me feel safe indeed. Safe enou
 <iframe loading="lazy" style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=2519790201/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/track=274930281/transparent=true/" seamless><a href="https://sewersender.bandcamp.com/album/the-dawn-of-new">The Dawn of New de Eletun Selona</a></iframe>
 
 ### Elfenberg - Ritmo Paradiso
-Found thanks to Axel Boman. Boman, Mr Tophat & Art Alphie and Jesper Dahlbäck already made Sweden sunny. Elfenberg pushes it further by making it even trippier with a nice acid touch. This track will make you dance, smile and feel the sunrays on your happy face. And of you close your eyes you could even freely go back to Outro Lado for free.
+Found thanks to Axel Boman. Boman, Mr Tophat & Art Alphie and Jesper Dahlbäck already made Sweden sunny. Elfenberg pushes it further by making it even trippier with a nice acid touch. This track will make you dance, smile and feel the sunrays on your happy face. And if you close your eyes you could even freely go back to Outro Lado for free.
 
 <iframe loading="lazy" style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=3437950582/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/track=1681515993/transparent=true/" seamless><a href="https://elfenberg.bandcamp.com/album/ritmo-paradiso">Ritmo Paradiso de Elfenberg</a></iframe>
 

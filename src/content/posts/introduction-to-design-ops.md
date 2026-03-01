@@ -3,9 +3,7 @@ title: Introduction to DesignOps
 date: '2022-09-20'
 description: Learn more about Design Operations aka "DesignOps". What is it? Where is it? Who does it involve? How can I get started? 
 author: Louis Chenais
-coverImage:
-  src: '@/assets/img/blog/design-ops-menu.avif'
-  alt: ''
+coverImage: '@/assets/img/blog/design-ops-menu.avif'
 tags: ['design']
 readingTime: '7min'
 ---

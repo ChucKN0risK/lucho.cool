@@ -1,12 +1,13 @@
 ---
 import { Image } from "astro:assets";
-import { getW3FormattedDate, getFormattedDate } from "@/utils";
-import Layout from "@/layouts/Layout.astro";
-import TOC from "@/components/TOC.astro";
 import type { CollectionEntry } from "astro:content";
+import TOC from "@/components/TOC.astro";
+import Layout from "@/layouts/Layout.astro";
+import { getFormattedDate, getW3FormattedDate } from "@/utils";
 import clockIcon from "../assets/vectors/clock.svg?raw";
+
 interface Props {
-  post: CollectionEntry<"posts">;
+	post: CollectionEntry<"posts">;
 }
 
 const { post } = Astro.props;
@@ -16,17 +17,17 @@ const w3FormattedDate = getW3FormattedDate(post.data.date);
 const formattedDate = getFormattedDate(post.data.date);
 ---
 
-<Layout title={post.data.title}>
+<Layout title={post.data.title} description={post.data.description} image={post.data.coverImage.src}>
   {headings.length > 1 && <TOC headings={headings} />}
   <article class='article-content'>
     <div class='article-hero'>
       <div class='article-img'>
         <Image
-          alt={post.data.coverImage.alt}
+          alt=''
           class='object-cover'
           fetchpriority='high'
           loading='eager'
-          src={post.data.coverImage.src}
+          src={post.data.coverImage}
         />
       </div>
       <h1>{post.data.title}</h1>

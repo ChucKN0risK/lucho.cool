@@ -3,9 +3,7 @@ title: Design Tokens for Dummies
 date: '2018-01-17'
 description: A general introduction about design tokens and how they are useful when maintaining user interfaces.
 author: Louis Chenais
-coverImage:
-  src: '@/assets/img/blog/design-tokens-for-dummies-cover.webp'
-  alt: ''
+coverImage: '@/assets/img/blog/design-tokens-for-dummies-cover.webp'
 tags: ['design', 'development']
 readingTime: '6min'
 ---

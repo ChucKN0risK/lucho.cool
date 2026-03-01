@@ -3,9 +3,7 @@ title: Music Review • Music For Psychedelic Therapy
 date: '2022-01-04'
 description: A personal review of Jon Hopkins' latest album "Music For Psychedelic Therapy" 
 author: Louis Chenais
-coverImage:
-  src: '@/assets/img/blog/jon-hopkins.jpg'
-  alt: ''
+coverImage: '@/assets/img/blog/jon-hopkins.jpg'
 tags: ['music', 'ambient']
 readingTime: '3min'
 ---

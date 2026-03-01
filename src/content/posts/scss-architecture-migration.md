@@ -3,9 +3,7 @@ title: Migrating your SCSS architecture to the "@use" rule
 date: "2024-12-05"
 description: Let's migrate an old SCSS architecture from the "@import" rule to the new "@use" rule
 author: Louis Chenais
-coverImage:
-  src: "@/assets/img/blog/migrating-scss-architecture-cover.jpg"
-  alt: ""
+coverImage: "@/assets/img/blog/migrating-scss-architecture-cover.jpg"
 tags: ["design-tokens", "development"]
 readingTime: "6min"
 ---

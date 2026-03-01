@@ -3,9 +3,7 @@ title: 4 Responsive Navigation Principles & Their Implementation
 date: '2016-02-08'
 description: An introduction to 4 navigation patterns with their respective implementation
 author: Louis Chenais
-coverImage:
-  src: '@/assets/img/blog/responsive-navigation-principles-cover.webp'
-  alt: ''
+coverImage: '@/assets/img/blog/responsive-navigation-principles-cover.webp'
 tags: ['design', 'development']
 readingTime: '7min'
 ---

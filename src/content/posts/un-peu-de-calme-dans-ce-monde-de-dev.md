@@ -3,9 +3,7 @@ title: Un peu de calme dans ce monde de dev
 date: "2025-09-02"
 description: Submergé de nouvelles annoncant la fin du développement frontend et du design? Perdu au milieu de tous ces nouveaux outils ? Prenons du recul et voyons ensemble la posture à adopter pour rester calme dans ce monde du frontend bousculé par l'IA.
 author: Louis Chenais
-coverImage:
-  src: "@/assets/img/blog/smart-meme.jpg"
-  alt: ""
+coverImage: "@/assets/img/blog/smart-meme.jpg"
 tags: ["ia", "development"]
 readingTime: "7min"
 ---
