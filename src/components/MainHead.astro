@@ -13,11 +13,11 @@ const {
 	image,
 } = Astro.props;
 
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const socialImageURL = new URL(
 	image ? image : "/default-social-image.png",
 	Astro.url,
 ).href;
-console.log(socialImageURL);
 ---
 
 <meta charset='UTF-8' />
@@ -25,6 +25,9 @@ console.log(socialImageURL);
 <meta name='viewport' content='width=device-width' />
 <meta name='generator' content={Astro.generator} />
 <title>{title}</title>
+<link href={canonicalURL} rel="canonical" />
+
+
 <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
 <link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
