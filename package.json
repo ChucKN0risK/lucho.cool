@@ -1,28 +1,29 @@
 {
-  "name": "new-portfolio",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro check && astro build",
-    "preview": "astro preview",
-    "astro": "astro",
-    "upgrade": "yarn upgrade-interactive"
-  },
-  "dependencies": {
-    "@astrojs/check": "^0.9.6",
-    "@astrojs/sitemap": "^3.7.0",
-    "@microflash/rehype-figure": "^2.1.4",
-    "astro": "^5.17.3",
-    "astro-icon": "^1.1.5",
-    "astro-og": "^0.3.2",
-    "astro-robots-txt": "^1.0.0",
-    "rehype-external-links": "^3.0.0",
-    "sharp": "^0.34.5"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "2.4.4",
-    "typescript": "^5.9.3"
-  }
+	"name": "new-portfolio",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro check && astro build",
+		"preview": "astro preview",
+		"astro": "astro",
+		"check": "astro check && biome check",
+		"lint": "biome check --write"
+	},
+	"dependencies": {
+		"@astrojs/check": "^0.9.6",
+		"@astrojs/sitemap": "^3.7.0",
+		"@microflash/rehype-figure": "^2.1.4",
+		"astro": "^5.18.0",
+		"astro-icon": "^1.1.5",
+		"astro-og": "^0.3.2",
+		"astro-robots-txt": "^1.0.0",
+		"rehype-external-links": "^3.0.0",
+		"sharp": "^0.34.5"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.4.4",
+		"typescript": "^5.9.3"
+	}
 }
