@@ -11,15 +11,13 @@ interface Props {
 }
 
 const { post } = Astro.props;
-console.log(Astro.props);
-console.log(post);
 const { headings } = await render(post);
-
-const w3FormattedDate = getW3FormattedDate(post.data.date);
-const formattedDate = getFormattedDate(post.data.date);
+const { description, title, coverImage, date, readingTime } = post.data;
+const w3FormattedDate = getW3FormattedDate(date);
+const formattedDate = getFormattedDate(date);
 ---
 
-<Layout title={post.data.title} description={post.data.description} image={post.data.coverImage.src}>
+<Layout title={title} description={description} image={coverImage.src}>
   {headings.length > 1 && <TOC headings={headings} />}
   <article class='article-content'>
     <div class='article-hero'>
@@ -29,15 +27,15 @@ const formattedDate = getFormattedDate(post.data.date);
           class='object-cover'
           fetchpriority='high'
           loading='eager'
-          src={post.data.coverImage}
+          src={coverImage}
         />
       </div>
-      <h1>{post.data.title}</h1>
+      <h1>{title}</h1>
       <div class='article-info'>
         <time datetime={w3FormattedDate}>{formattedDate}</time>
         <div>
           <Clock />
-          {post.data.readingTime} read
+          {readingTime} read
         </div>
       </div>
     </div>
