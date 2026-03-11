@@ -4,7 +4,7 @@ import { type CollectionEntry, render } from "astro:content";
 import TOC from "@/components/TOC.astro";
 import Layout from "@/layouts/Layout.astro";
 import { getFormattedDate, getW3FormattedDate } from "@/utils";
-import clockIcon from "../assets/vectors/clock.svg?raw";
+import Clock from "../assets/vectors/clock.svg";
 
 interface Props {
 	post: CollectionEntry<"blog">;
@@ -36,7 +36,7 @@ const formattedDate = getFormattedDate(post.data.date);
       <div class='article-info'>
         <time datetime={w3FormattedDate}>{formattedDate}</time>
         <div>
-          <Fragment set:html={clockIcon} />
+          <Clock />
           {post.data.readingTime} read
         </div>
       </div>
